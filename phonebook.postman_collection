@@ -1,0 +1,203 @@
+{
+	"variables": [],
+	"info": {
+		"name": "phonebook",
+		"_postman_id": "d3b6ccf8-a8a8-74e7-f593-fc1dd4992105",
+		"description": "Node.js Phonebook app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/users/signup",
+			"request": {
+				"url": "localhost:3000/users/signup",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "fname",
+							"value": "Syed Ali",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "lname",
+							"value": "Shah",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "ali--3",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "ali@gmail.com",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "Route for New User Signup"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/contacts/save",
+			"request": {
+				"url": "localhost:3000/api/contacts/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImNvbnRhY3RzIjpbXSwiX2lkIjoiNWUxY2JlMTkyMjJjMjQ0MWE4YWFlM2EzIiwiZm5hbWUiOiJTeWVkIEFsaSIsImxuYW1lIjoiU2hhaCIsImVtYWlsIjoiYWxpQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiYWxpLS0zIiwidXBkYXRlZCI6IjIwMjAtMDEtMTNUMTg6NTk6MzcuODE5WiIsIl9fdiI6MH0sImlhdCI6MTU3ODk0MjI1NiwiZXhwIjoxNTc4OTQ1ODU2fQ.II22sZGjRloeVIaMJgdXwk7tF1x1Unc6VytUN8MkVJs",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "phone",
+							"value": "052285638289",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "country",
+							"value": "UAE",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "fname",
+							"value": "Kathrine",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "lname",
+							"value": "Hodge",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "email",
+							"value": "kate@gmail.com",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "cId",
+							"value": "5e1cbad07643062eb08660f0",
+							"type": "text",
+							"description": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": "API Routes for Saving or Updating a new Contact for Updating the existing contact just pass the cId variable as ID of that contact to be updated."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/contacts/single/5e1cbad07643062eb08660f0",
+			"request": {
+				"url": "localhost:3000/api/contacts/single/5e1cbad07643062eb08660f0",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImNvbnRhY3RzIjpbXSwiX2lkIjoiNWUxYzcyMzI5MzU1ZDY0OTQwN2E5NjhiIiwiZm5hbWUiOiJTeWVkIElxcmEiLCJsbmFtZSI6IlNoYWgiLCJlbWFpbCI6ImlxcmFAZ21haWwuY29tIiwicGFzc3dvcmQiOiJpcXJhLS0zIiwidXBkYXRlZCI6IjIwMjAtMDEtMTNUMTM6MzU6NDYuNDQxWiIsIl9fdiI6MH0sImlhdCI6MTU3ODk0MDI0OCwiZXhwIjoxNTc4OTQzODQ4fQ.11QZjLpdQliVQUazGnlxIgOo4_xoDEEbfd5cU33JMg0",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Contacts API Route for fetching single contact data you need to pass the ID as a param in the route"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/contacts/list/1",
+			"request": {
+				"url": "localhost:3000/api/contacts/list/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImNvbnRhY3RzIjpbXSwiX2lkIjoiNWUxY2JlMTkyMjJjMjQ0MWE4YWFlM2EzIiwiZm5hbWUiOiJTeWVkIEFsaSIsImxuYW1lIjoiU2hhaCIsImVtYWlsIjoiYWxpQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiYWxpLS0zIiwidXBkYXRlZCI6IjIwMjAtMDEtMTNUMTg6NTk6MzcuODE5WiIsIl9fdiI6MH0sImlhdCI6MTU3ODk0MjI1NiwiZXhwIjoxNTc4OTQ1ODU2fQ.II22sZGjRloeVIaMJgdXwk7tF1x1Unc6VytUN8MkVJs",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Contacts API Route for Listing All the Logged in User Contacts along with pagination you need to pass the page no in the params like 1 for 1st page records per page its showing 9 records."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/users/login",
+			"request": {
+				"url": "localhost:3000/users/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "ali@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "ali--3",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "API Route for logging in user who has already registered."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/contacts/delete/5e1c6a5afa13af4f80ff9bf5",
+			"request": {
+				"url": "localhost:3000/api/contacts/delete/5e1c6a5afa13af4f80ff9bf5",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImNvbnRhY3RzIjpbXSwiX2lkIjoiNWUxYzcyMzI5MzU1ZDY0OTQwN2E5NjhiIiwiZm5hbWUiOiJTeWVkIElxcmEiLCJsbmFtZSI6IlNoYWgiLCJlbWFpbCI6ImlxcmFAZ21haWwuY29tIiwicGFzc3dvcmQiOiJpcXJhLS0zIiwidXBkYXRlZCI6IjIwMjAtMDEtMTNUMTM6MzU6NDYuNDQxWiIsIl9fdiI6MH0sImlhdCI6MTU3ODk0MDI0OCwiZXhwIjoxNTc4OTQzODQ4fQ.11QZjLpdQliVQUazGnlxIgOo4_xoDEEbfd5cU33JMg0",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Contacts API Routes for Deleting a specfic contact you need to pass the ID of that contact in the URL as a param for that record to be deleted."
+			},
+			"response": []
+		}
+	]
+}
